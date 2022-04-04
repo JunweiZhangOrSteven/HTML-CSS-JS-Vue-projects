@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the Calculator</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 208px;
+            height: 320px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .textview{
+            width: 186px;
+            padding: 10px;
+            font-size: 25px;
+            margin: 3;
+            opacity: 80%;
+        }
+        .button{
+            width: 50px;
+            height: 50px;
+            margin: 3;
+            cursor: pointer;
+            font-size: 24px;
+            opacity: 60%;
+            
+
+        }
+        .bg{
+           
+            position:absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:100%;
+            min-width: 1000px;
+           
+            background: url(imgs/CalculatorBg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+
+        }
+        body{
+        
+		    background: url("imgs/CalculatorBg.jpg") no-repeat center center fixed;   
+            -webkit-background-size: cover;
+            -o-background-size: cover;                
+            background-size: cover;
+	
+        }
+        
+    </style>
+
+    <script>
+        function insert(num){
+            document.form.textview.value=document.form.textview.value+num;
+        }
+        function clean(){
+            document.form.textview.value="";
+        }
+        function equal(){
+            var val=document.form.textview.value;
+            var flag=false;
+            var result;
+            for(i = 0;i <= val.length;i++){             
+                if((val.charAt(i)=='+')||(val.charAt(i)=='-')||(val.charAt(i)=='*')||(val.charAt(i)=='/')||(val.charAt(i)=='.')){
+                    if((val.charAt(i-1)=='+')||(val.charAt(i-1)=='-')||(val.charAt(i-1)=='*')||(val.charAt(i-1)=='/')||(val.charAt(i)=='.')){
+                        flag=true;
+                    }
+                }
+
+            }
+
+
+
+            
+            if(val.charAt(0) === '0'){
+                if(val.charAt(1) === '0'){
+                    flag=true;
+                }
+            }
+            
+            
+            result=eval(val);
+
+            if(flag == true){
+                document.form.textview.value="Error"; 
+            }else{
+                document.form.textview.value=result;         
+            }
+        }
+        
+    </script>
+
+
+</head>
+<body background="imgs/CalculatorBg.jpg">
+    <div>
+
+
+        <div class="container">
+            <form name="form">
+                <input type="text" name="textview" id="" class="textview">
+                <table>
+    
+                    <tr>
+                        <td colspan="3"><input style="width: 156px;" type="button" class="button" value="AC" onclick="clean()"></td>
+                        <td><input type="button" class="button" value="/" onclick="insert('/')"></td>        
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" class="button" value="7" onclick="insert(7)"></td>
+                        <td><input type="button" class="button" value="8" onclick="insert(8)"></td>
+                        <td><input type="button" class="button" value="9" onclick="insert(9)"></td>
+                        <td><input type="button" class="button" value="*" onclick="insert('*')"></td>            
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" class="button" value="4" onclick="insert(4)"></td>
+                        <td><input type="button" class="button" value="5" onclick="insert(5)"></td>
+                        <td><input type="button" class="button" value="6" onclick="insert(6)"></td>
+                        <td><input type="button" class="button" value="-" onclick="insert('-')"></td>            
+                    </tr>
+    
+                    <tr>
+                        <td><input type="button" class="button" value="1" onclick="insert(1)"></td>
+                        <td><input type="button" class="button" value="2" onclick="insert(2)"></td>
+                        <td><input type="button" class="button" value="3" onclick="insert(3)"></td>
+                        <td><input type="button" class="button" value="+" onclick="insert('+')"></td>            
+                    </tr>
+    
+                    <tr>
+                        <td colspan="2"><input style="width: 104px;" type="button" class="button" value="0"  onclick="insert(0)"></td>
+                        <td><input type="button" class="button" value="." onclick="insert('.')"></td>  
+                        <td><input type="button" class="button" value="=" onclick="equal()"></td>            
+                    </tr>
+    
+    
+                </table>
+            </form>
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>
