@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Game.css">
+
+    <!-- <script src="Game.js"></script> -->
+
+</head>
+
+<body>
+    <div id="content">
+
+
+
+        <div class="gameHeader">
+
+            <input class="btn" style="margin-right: 20px;" type="button" value="Start" onclick="GameStart()" />
+            <input class="btn" type="button" value="Stop" onclick="GameOver()" />
+        </div>
+
+
+
+        <form id="form1" name="form1">
+            <span>HIT:</span>
+            <input class="screen" type="text" disabled="disabled" name="hit" />
+            <span>SCORE:</span>
+            <input class="screen" type="text" disabled="disabled" name="score" />
+            <span>TIME:</span>
+            <input class="screen" type="text" disabled="disabled" name="remtime" />
+        </form>
+
+        <div id="container">
+
+            <table id="table" cellspacing="0">
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="Game.js "></script>
+
+</html>

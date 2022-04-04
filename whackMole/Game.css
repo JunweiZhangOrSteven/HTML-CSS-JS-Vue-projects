@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    height: 1500px;
+    margin-top: 0;
+    margin-left: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+#form1 {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+#form1 span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table {
+    background-color: aliceblue;
+    margin: 0 auto;
+    border: 1px solid black;
+    opacity: 80%;
+    cursor: url("images/cursor.png");
+}
+
+td {
+    margin: 0 auto;
+    width: 200px;
+    height: 160px;
+    border: 2px solid black;
+}
+
+td img {
+    width: 40%;
+}
+
+body {
+    background: url("images/forest.jpg") no-repeat center center fixed;
+    background-size: cover;
+    /* cursor: url("images/cursor.png"), auto; */
+}
+
+.btn {
+    display: block;
+    width: 100px;
+    height: 40px;
+    float: left;
+    font-size: 24px;
+}
+
+.gameHeader {
+    width: 220px;
+    height: 40px;
+    margin: 20px auto;
+}
+
+.screen {
+    width: 80px;
+    height: 30px;
+    font-size: 24px;
+}
