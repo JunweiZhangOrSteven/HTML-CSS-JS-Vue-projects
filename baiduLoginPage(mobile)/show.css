@@ -1,0 +1,56 @@
+body {
+    background: url(images/5GIAXE8KKAP~]2FXLKMS_DR) no-repeat center center fixed;
+    background-size: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container_show {
+    display: block;
+    overflow: hidden;
+    width: 60%;
+    height: 220px;
+    box-shadow: gray 0px 0px 6px;
+    border-radius: 4px;
+    margin: 10% auto;
+    background-color: white;
+    opacity: 85%;
+}
+
+#user_name {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+#name {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-left: 10%;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+}
+
+#pwd {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-left: 10%;
+    border: 1px solid darkgray;
+    border-radius: 10px;
+}
+
+#user_pwd {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10%;
+}

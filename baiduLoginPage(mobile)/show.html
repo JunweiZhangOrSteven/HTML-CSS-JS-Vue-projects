@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="show.css">
+</head>
+
+<body>
+    <div id="container_show">
+        <div id="user_name">
+            用户名:
+        </div>
+        <div id="name"></div>
+
+
+        <div id="user_pwd">
+            密码:
+        </div>
+        <div id="pwd"></div>
+
+
+
+    </div>
+</body>
+<script>
+    var the_name = document.getElementById('name');
+    var the_pwd = document.getElementById('pwd');
+    the_name.innerText = window.localStorage.getItem('userName');
+    the_pwd.innerText = window.localStorage.getItem('userPwd');
+</script>
+
+</html>
